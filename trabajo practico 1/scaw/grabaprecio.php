@@ -23,16 +23,11 @@ $host='localhost';
 $user='root';
 $pass='';
 
-$descripcion = $_POST['descripcion'];
 $valor = $_POST['valor'];
 $id_empleado = $_POST['id_empleado'];
+$id_producto = $_POST['id_producto'];
 $semana= date("W");
 
-echo'<div>Producto : </div>'; echo $descripcion;
-echo "<br>";
-echo'<div>Precio : </div>'; echo $valor;
-echo "<br>";
-echo'<div>Empleado : </div>';echo $id_empleado;
 
 $conexion=mysql_connect($host,$user,$pass);
 $sql="CREATE DATABASE IF NOT EXISTS precioscuidados";
@@ -40,20 +35,39 @@ $inseltar=mysql_query($sql,$conexion);//crea la base
 $seleccion_base =mysql_select_db('precioscuidados',$conexion);//selecciona la base
 //$query 	= "SELECT * FROM precios WHERE descripcion = '$descripcion' and id_empleado = '$id_empleado'"; //busca el producto en la tabla
 //$consulta = mysql_query($query, $conexion);
-$query_cambia = "UPDATE precios SET id_empleado = '$id_empleado', descripcion = '$descripcion', valor = '$valor', semana = '$semana' WHERE descripcion = '$descripcion' and id_empleado = '$id_empleado'";
-$consulta_cambia = mysql_query($query_cambia, $conexion);
-			
-			
-if(!$consulta_cambia)
+$descripcion= mysql_query("SELECT descripcion FROM producto WHERE id_producto = $id_producto", $conexion);
+$fila = mysql_fetch_array($descripcion, MYSQL_NUM);
+$query_existe="SELECT COUNT(*) FROM precios WHERE semana=$semana AND id_empleado=$id_empleado and id_producto=$id_producto";
+$query_nuevo = "INSERT INTO precios VALUES ('$id_producto','$id_empleado','$fila[0]','$valor','$semana')";
+$query_cambia = "UPDATE precios SET valor = '$valor' WHERE semana=$semana AND id_empleado=$id_empleado and id_producto=$id_producto";
+
+echo'<div>Producto : </div>'; echo $fila[0];
+echo "<br>";
+echo'<div>Precio : </div>'; echo $valor;
+echo "<br>";
+echo'<div>Empleado : </div>';echo $id_empleado;
+
+if($query_existe==0)
 {
-	echo 'Ingreso fallido';
+  
+  $consulta_nuevo = mysql_query($query_nuevo, $conexion);
 }
-	else
-	{
-		echo"<br>"; 
-		echo 'Precio insertado con exito';
-		//header("location:cargaprecios.php");
-	}	
+else
+{
+
+$consulta_cambia = mysql_query($query_cambia, $conexion);
+}
+
+/*[if(!$consulta_cambia)
+  {
+    echo 'Ingreso fallido';
+  }
+    else
+    {
+      echo"<br>"; 
+      echo 'Precio insertado con exito';
+      //header("location:cargaprecios.php");
+    }]  */
 ?>	<div class="form-group">
         <div class="col-sm-6">
          <input type="submit" class="btn btn-info" value="Cargar otro precio" onClick="location.href = 'cargaprecios.php' ">

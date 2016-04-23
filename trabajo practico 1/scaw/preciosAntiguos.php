@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Visualización de precios antiguos</title>
+<title>Visualización de precios</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
@@ -33,27 +33,20 @@ $filtro_semana = mysql_query($query_cosulta, $conexion);
 
 <div class="container-fluid">
     <div class="row">
-      <div class="col-sm-4">
-       </div>
 
-       <div class="col-sm-4">
-        <h3>Visualizaci&oacute;n de precios antiguos</h3>
+     <div class="col-sm-4">
+     </div>
 
-           <div class="form-group">
-             <label class="control-label col-sm-6" for="email"> Ingrese semana a consultar (WW) </label>
-            <div class="col-sm-2">
-               <input type="text"  name="valor" value=""/> 
-             </div>
-         </div>
-          <br><input type="submit" class="btn btn-info" value="Consultar" onClick="location.href = 'preciosAntiguos.php' "></br>
-        <br><input type="submit" class="btn btn-danger" value="Volver" onClick="location.href = 'indexUsuario.php' "></br>
-       </div>
-       <div class="col-sm-4">
-       </div>
-      
+     <div class="col-sm-4">
+      <h3>Visualizaci&oacute;n de precios antiguos</h3>
+      <br><input type="submit" class="btn btn-danger" value="Volver" onClick="location.href = 'indexUsuario.php' "></br>
+     </div>
+    
     </div>
   </div>
+
 </div>
 
+</div>
 </body>
 </html>

@@ -45,18 +45,17 @@ echo "<br>";}*/
             <div class="form-group">
           <label class="control-label col-sm-6" for="email">  Seleccione un producto</label>
            <div class="col-sm-4">
-       <select  name="descripcion" class="form-control">  
-        <?php    
-        while($fila = mysql_fetch_array($consulta))  
-        {
+            <?php 
+            
+            echo '<select name="id_producto">'; 
+            while($row = mysql_fetch_assoc($consulta)) 
+            { 
+            echo '<option values=' . $row["id_producto"] . '>' . $row["descripcion"] . '</option>'; 
+            } 
+            echo '</select>';
             ?>
-            <option <?php echo $fila['descripcion'] ?> >
-            <?php echo $fila['descripcion']; ?>
-            </option>
-            <?php
-        }    
-        ?>       
-      </select>
+
+       
     </div>
       </div>  
         <div class="form-group">
