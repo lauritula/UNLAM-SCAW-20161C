@@ -6,7 +6,7 @@
 </head>
 <body>
 
-<h1>Seleccione una opción</h1>
+<h2>Seleccione una opción</h2>
 
 <br><input type="submit" value="Cargar precio" onClick="location.href = 'cargaprecios.php' "></br>
 <br><input type="submit" value="Visualizar precio" onClick="location.href = 'visualizarprecio.php' "></br>
