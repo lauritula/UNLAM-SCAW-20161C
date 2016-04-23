@@ -47,13 +47,14 @@ echo "<br>";}*/
            <div class="col-sm-4">
             <?php 
             
-            echo '<select name="id_producto">'; 
+            echo '<select name="producto_descripcion">'; 
             while($row = mysql_fetch_assoc($consulta)) 
             { 
-            echo '<option values=' . $row["id_producto"] . '>' . $row["descripcion"] . '</option>'; 
+            echo '<option value=' . $row["id_producto"] . '-' . $row["descripcion"] . '>' . $row["descripcion"] . '</option>'; 
             } 
             echo '</select>';
             ?>
+
 
        
     </div>

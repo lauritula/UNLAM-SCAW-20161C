@@ -25,8 +25,9 @@ $pass='';
 
 $valor = $_POST['valor'];
 $id_empleado = $_POST['id_empleado'];
-$id_producto = $_POST['id_producto'];
+list($id_producto, $descripcion) = explode("-", $_POST['producto_descripcion'], 2);
 $semana= date("W");
+
 
 
 $conexion=mysql_connect($host,$user,$pass);
@@ -35,13 +36,12 @@ $inseltar=mysql_query($sql,$conexion);//crea la base
 $seleccion_base =mysql_select_db('precioscuidados',$conexion);//selecciona la base
 //$query 	= "SELECT * FROM precios WHERE descripcion = '$descripcion' and id_empleado = '$id_empleado'"; //busca el producto en la tabla
 //$consulta = mysql_query($query, $conexion);
-$descripcion= mysql_query("SELECT descripcion FROM producto WHERE id_producto = $id_producto", $conexion);
-$fila = mysql_fetch_array($descripcion, MYSQL_NUM);
+
 $query_existe="SELECT COUNT(*) FROM precios WHERE semana=$semana AND id_empleado=$id_empleado and id_producto=$id_producto";
-$query_nuevo = "INSERT INTO precios VALUES ('$id_producto','$id_empleado','$fila[0]','$valor','$semana')";
+$query_nuevo = "INSERT INTO precios VALUES ('$id_producto','$id_empleado','$descripcion','$valor','$semana')";
 $query_cambia = "UPDATE precios SET valor = '$valor' WHERE semana=$semana AND id_empleado=$id_empleado and id_producto=$id_producto";
 
-echo'<div>Producto : </div>'; echo $fila[0];
+echo'<div>Producto : </div>'; echo $descripcion;
 echo "<br>";
 echo'<div>Precio : </div>'; echo $valor;
 echo "<br>";
