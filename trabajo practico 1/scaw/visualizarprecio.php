@@ -5,7 +5,7 @@
 <title>Visualización de precios</title>
 </head>
 <body>
-
+<div class="container">
 <h1>Visualizaci&oacute;n de precios</h1>
 
 <?php
@@ -42,6 +42,9 @@ if ($row = mysql_fetch_array($filtro_semana))
   		echo "¡ No se ha encontrado ningún registro !";
   	}
 ?>
-<br><input type="submit" value="Volver" onClick="location.href = 'indexUsuario.php' "></br>
+
+<br> <button type="button" class="btn btn-default">Default</button>
+<input type="submit"> value="Volver" onClick="location.href = 'indexUsuario.php' "></br>
+</div>
 </body>
 </html>
