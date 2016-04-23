@@ -10,8 +10,6 @@
 <title>Ingresar Precios</title>
 </head>
 <body>
-  
-
  <?php
 session_start();
  
@@ -34,35 +32,62 @@ $consulta= mysql_query("select * from producto",$conexion)   or die ("Fallo en l
 { echo $fila['descripcion'];
 echo "<br>";}*/
   ?>   
-   <form action= "grabaprecio.php" method="post">
-    Seleccione un producto
-   <select  name="descripcion">  
-    <?php    
-    while($fila = mysql_fetch_array($consulta))  
-    {
-        ?>
-        <option <?php echo $fila['descripcion'] ?> >
-        <?php echo $fila['descripcion']; ?>
-        </option>
-        <?php
-    }    
-    ?>       
-</select>	
-	<br><br>Ingrese el precio
-	<input type="text"  name="valor" value=""/>	
-	
-	<br><br>Ingrese el numero de empleado
-	<input type="text"  name="id_empleado" value=""/>	
+  
+<div class="container-fluid">
+    <div class="row">
 
-	
-	<input type="submit" value="Ingresar" />
-	<input type="reset" name="limpiar" value="Reset" />
-			
-		</form>
-		
-		
-		<form action= "indexUsuario.php" method="post"><br>
-<input type="submit" value="Volver" class="boton"/>
+     <div class="col-sm-4">
+
+     </div>
+     <div class="col-sm-4">
+      <h3>Carga de precios</h3>
+           <form action= "grabaprecio.php" method="post" class="form-horizontal">
+            <div class="form-group">
+          <label class="control-label col-sm-6" for="email">  Seleccione un producto</label>
+           <div class="col-sm-4">
+       <select  name="descripcion" class="form-control">  
+        <?php    
+        while($fila = mysql_fetch_array($consulta))  
+        {
+            ?>
+            <option <?php echo $fila['descripcion'] ?> >
+            <?php echo $fila['descripcion']; ?>
+            </option>
+            <?php
+        }    
+        ?>       
+      </select>
+    </div>
+      </div>  
+        <div class="form-group">
+          <label class="control-label col-sm-6" for="email">Ingrese el precio</label>
+          <div class="col-sm-2">
+           <input type="text"  name="valor" value=""/> 
+          </div>
+      </div>
+       <div class="form-group">
+          <label class="control-label col-sm-6" for="email">N&uacute;mero de empleado</label>
+          <div class="col-sm-2">
+            <input type="text"  name="id_empleado" value=""/> 
+          </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-4">
+         <input type="submit" class="btn btn-info" value="Ingresar" />
+       </div>
+       <div class="col-sm-4">
+          <input type="reset" class="btn btn-info" name="limpiar" value="Reset" />
+        </div>
+     
+       </div>
+
+       <div class="col-sm-4">
+       </div>
+          </form>
+     </div>
+   </div>
+<form action= "indexUsuario.php" method="post"><br>
+<input type="submit" value="Volver" class="btn btn-danger" class="boton"/>
 </form>	
 
 </body>

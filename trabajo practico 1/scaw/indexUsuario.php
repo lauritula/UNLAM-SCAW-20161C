@@ -9,14 +9,19 @@
 <title>Opciones de usuario</title>
 </head>
 <body>
-<div class="container">
-<h2>Seleccione una opción</h2>
+<div class="container-fluid">
 
-
-
-<br><input type="submit" class="btn btn-primary" value="Cargar precio" onClick="location.href = 'cargaprecios.php' "></br>
-<br><input type="submit" class="btn btn-primary" value="Visualizar precio" onClick="location.href = 'visualizarprecio.php' "></br>
-<br><input type="submit" class="btn btn-danger" value="Salir" onClick="location.href = 'login.php' "></br>
+	<div class="row">
+ 		 <div class="col-sm-4">
+ 		 </div>
+ 		 <div class="col-sm-4">
+ 		 	<h3>Seleccione una opción</h3>
+ 		 	<br><input type="submit" class="btn btn-info" value="Cargar precio" onClick="location.href = 'cargaprecios.php' "></br>
+			<br><input type="submit" class="btn btn-info" value="Visualizar precio" onClick="location.href = 'visualizarprecio.php' "></br>
+			<br><input type="submit" class="btn btn-danger" value="Salir" onClick="location.href = 'login.php' "></br>
+ 		 </div>
+ 		 <div class="col-sm-4">
+ 		 </div>
 </div>
 </body>
 </html>
