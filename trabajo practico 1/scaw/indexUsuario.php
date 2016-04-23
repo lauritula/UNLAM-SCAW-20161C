@@ -14,9 +14,9 @@
 
 
 
-<br><input type="submit" class="btn btn-default" value="Cargar precio" onClick="location.href = 'cargaprecios.php' "></br>
-<br><input type="submit" class="btn btn-default" value="Visualizar precio" onClick="location.href = 'visualizarprecio.php' "></br>
-<br><input type="submit" class="btn btn-default" value="Salir" onClick="location.href = 'login.php' "></br>
+<br><input type="submit" class="btn btn-primary" value="Cargar precio" onClick="location.href = 'cargaprecios.php' "></br>
+<br><input type="submit" class="btn btn-primary" value="Visualizar precio" onClick="location.href = 'visualizarprecio.php' "></br>
+<br><input type="submit" class="btn btn-danger" value="Salir" onClick="location.href = 'login.php' "></br>
 </div>
 </body>
 </html>
