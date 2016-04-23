@@ -6,11 +6,11 @@
 			Numero de  Usuario
 			<input type="text" id="campo" name="id" value="" class="input"/>
 			<br><br>
-			Contrase&aacute;
+			Contrase&ntilde;a
 			<input type="password" name="contrasenia" value="" class="input"/>
 			<br><br>		
 			<input type="submit" value="Ingresar" class="boton"/>
-			<input type="reset" name="limpiar" value="Reset" class="boton"/>
+			<input type="reset" name="limpiar" value="Limpiar" class="boton"/>
 		</form>
 		<form action= "logoutb.php" method="post"><br>
 		<input type="submit" value="Salir" class="boton"/>

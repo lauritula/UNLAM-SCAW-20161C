@@ -13,6 +13,7 @@ $pass='';
 $descripcion = $_POST['descripcion'];
 $valor = $_POST['valor'];
 $id_empleado = $_POST['id_empleado'];
+$semana= date("W");
 
 echo $descripcion;
 echo "<br>";
@@ -26,7 +27,7 @@ $inseltar=mysql_query($sql,$conexion);//crea la base
 $seleccion_base =mysql_select_db('precioscuidados',$conexion);//selecciona la base
 //$query 	= "SELECT * FROM precios WHERE descripcion = '$descripcion' and id_empleado = '$id_empleado'"; //busca el producto en la tabla
 //$consulta = mysql_query($query, $conexion);
-$query_cambia = "UPDATE precios SET id_empleado = '$id_empleado', descripcion = '$descripcion', valor = '$valor', semana = '1' WHERE descripcion = '$descripcion' and id_empleado = '$id_empleado'";
+$query_cambia = "UPDATE precios SET id_empleado = '$id_empleado', descripcion = '$descripcion', valor = '$valor', semana = '$semana' WHERE descripcion = '$descripcion' and id_empleado = '$id_empleado'";
 $consulta_cambia = mysql_query($query_cambia, $conexion);
 			
 			
@@ -41,5 +42,6 @@ if(!$consulta_cambia)
 		//header("location:cargaprecios.php");
 	}	
 ?>
+<br><input type="submit" value="Volver" onClick="location.href = 'cargaprecios.php' "></br>
 </body>
 </html>

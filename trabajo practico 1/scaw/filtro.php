@@ -45,7 +45,7 @@ $contrasenia = $_POST['contrasenia'];
 				session_start();
 				$_SESSION['log']=1;
 				$_SESSION['id'] = $id;
-				header("location: visualizarprecio.php");
+				header("location:indexUsuario.php");
 			
 			
 		}

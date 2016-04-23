@@ -15,8 +15,6 @@ $pass='';
 $conexion=mysql_connect($host,$user,$pass);
 $sql="CREATE DATABASE IF NOT EXISTS precioscuidados";
 
-
-   
 $inseltar=mysql_query($sql,$conexion);
 /*if(!$inseltar){echo 'Error al crear la base de datos<br />';}
 else{echo 'Base de datos creada exitosamente<br />.';}*/
@@ -32,8 +30,6 @@ echo "<br>";}*/
   ?>   
    <form action= "grabaprecio.php" method="post">
     Seleccione un producto
-
-
    <select  name="descripcion">  
     <?php    
     while($fila = mysql_fetch_array($consulta))  
@@ -43,9 +39,7 @@ echo "<br>";}*/
         <?php echo $fila['descripcion']; ?>
         </option>
         <?php
-
-    }   
-    
+    }    
     ?>       
 </select>	
 	<br><br>Ingrese el precio
@@ -62,7 +56,7 @@ echo "<br>";}*/
 		
 		
 		<form action= "indexUsuario.php" method="post"><br>
-<input type="submit" value="Salir" class="boton"/>
+<input type="submit" value="Volver" class="boton"/>
 </form>	
 
 </body>
