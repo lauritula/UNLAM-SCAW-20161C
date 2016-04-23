@@ -1,6 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+	<title>Grabar precio</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
@@ -8,8 +9,15 @@
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </head>
 <body>
-	<div class="container">
-<?php
+	<div class="container-fluid">
+
+    	<div class="row">
+
+        <div class="col-sm-4">
+        </div>
+         <div class="col-sm-4">
+         	<h3>Confirmaci&oacute;n de precios</h3>
+         	<?php
 session_start();
 $host='localhost';
 $user='root';
@@ -20,11 +28,11 @@ $valor = $_POST['valor'];
 $id_empleado = $_POST['id_empleado'];
 $semana= date("W");
 
-echo $descripcion;
+echo'<div>Producto : </div>'; echo $descripcion;
 echo "<br>";
-echo $valor;
+echo'<div>Precio : </div>'; echo $valor;
 echo "<br>";
-echo $id_empleado;
+echo'<div>Empleado : </div>';echo $id_empleado;
 
 $conexion=mysql_connect($host,$user,$pass);
 $sql="CREATE DATABASE IF NOT EXISTS precioscuidados";
@@ -46,8 +54,21 @@ if(!$consulta_cambia)
 		echo 'Precio insertado con exito';
 		//header("location:cargaprecios.php");
 	}	
-?>
-<br><input type="submit" class="btn btn-danger" value="Volver" onClick="location.href = 'cargaprecios.php' "></br>
+?>	<div class="form-group">
+        <div class="col-sm-6">
+         <input type="submit" class="btn btn-info" value="Cargar otro precio" onClick="location.href = 'cargaprecios.php' ">
+       </div>
+       <div class="col-sm-6">
+          <input type="submit" class="btn btn-danger" value="Volver al index" onClick="location.href = 'indexUsuario.php' ">
+        </div>
+     
+     </div>
+ 	</div>
+      <div class="col-sm-4">
+      </div>
+     
+   
+    </div>
 </div>
 </body>
 </html>
