@@ -16,9 +16,11 @@
  		 <div class="col-sm-4">
  		 </div>
  		 <div class="col-sm-4">
+ 		 	<h3>Bienvenido, Usuario!</h3>
  		 	<h3>Seleccione una opción</h3>
- 		 	<br><input type="submit" class="btn btn-info" value="Cargar precio" onClick="location.href = 'cargaprecios.php' "></br>
-			<br><input type="submit" class="btn btn-info" value="Visualizar precio" onClick="location.href = 'visualizarprecio.php' "></br>
+ 		 	<br><input type="submit" class="btn btn-info" value="Cargar / Actualizar precio" onClick="location.href = 'cargaprecios.php' "></br>
+			<br><input type="submit" class="btn btn-info" value="Visualizar precios de esta semana" onClick="location.href = 'visualizarprecio.php' "></br>
+			<br><input type="submit" class="btn btn-info" value="Visualizar precios de otras semanas" onClick="location.href = 'filtroSemana.php' "></br>
 			<br><input type="submit" class="btn btn-danger" value="Salir" onClick="location.href = 'login.php' "></br>
  		 </div>
  		 <div class="col-sm-4">

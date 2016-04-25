@@ -40,10 +40,10 @@ echo "<br>";}*/
 
      </div>
      <div class="col-sm-4">
-      <h3>Carga de precios</h3>
+      <h3>Carga / Actualizacion de precios</h3>
            <form action= "grabaprecio.php" method="post" class="form-horizontal">
             <div class="form-group">
-          <label class="control-label col-sm-6" for="email">  Seleccione un producto</label>
+          <label class="control-label col-sm-6" for="email">  Seleccione un producto a cargar / actualizar</label>
            <div class="col-sm-4">
             <?php 
             
@@ -87,7 +87,7 @@ echo "<br>";}*/
      </div>
    </div>
 <form action= "indexUsuario.php" method="post"><br>
-<input type="submit" value="Volver" class="btn btn-danger" class="boton"/>
+<input type="submit" value="Volver al Inicio" class="btn btn-danger" class="boton"/>
 </form>	
 
 </body>

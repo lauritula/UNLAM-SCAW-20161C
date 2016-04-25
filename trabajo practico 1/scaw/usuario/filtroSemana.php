@@ -17,8 +17,6 @@ session_start();
 $host='localhost';
 $user='root';
 $pass='';
-
-
 $semana= date("W");
 
 $conexion=mysql_connect($host,$user,$pass);
@@ -38,14 +36,17 @@ $filtro_semana = mysql_query($query_cosulta, $conexion);
 
        <div class="col-sm-4">
         <h3>Visualizaci&oacute;n de precios antiguos</h3>
-
+            <form action= "preciosAntiguos.php" method="post"><br>
            <div class="form-group">
-             <label class="control-label col-sm-6" for="email"> Ingrese semana a consultar (WW) </label>
+             <label class="control-label col-sm-6" for="email"> Ingrese semana a consultar (formato SS) </label>
             <div class="col-sm-2">
-               <input type="text"  name="valor" value=""/> 
+               <input type="text"  name="semanaConsulta" value=""/> 
              </div>
          </div>
-          <br><input type="submit" class="btn btn-info" value="Consultar" onClick="location.href = 'preciosAntiguos.php' "></br>
+          <br>
+          
+          <input type="submit" class="btn btn-info" value="Consultar" class="boton"/>
+          </form> 
         <br><input type="submit" class="btn btn-danger" value="Volver" onClick="location.href = 'indexUsuario.php' "></br>
        </div>
        <div class="col-sm-4">
