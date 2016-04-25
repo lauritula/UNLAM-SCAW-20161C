@@ -39,9 +39,9 @@ Apellido
 <input type="submit" value="Modificar" />
 <input type="reset" name="limpiar" value="Reset" />
 </form>	
-<form action= "logoutb.php" method="post"><br>
-<input type="submit" value="Salir" class="boton"/>
-</form>	
+<form action= "../indexAdministrador.php" method="post"><br>
+<input type="submit" value="Volver al Inicio" class="btn btn-danger" class="boton"/>
+</form>
 </body>
 </html>
 

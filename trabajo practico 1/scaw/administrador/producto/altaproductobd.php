@@ -42,9 +42,8 @@ else
 	}
 }	
 ?>
-<form action= "administrador.php" method="post">
-<br><br>
-<input type="submit" value="Volver al menu"/>
-</form>	
+<form action= "../indexAdministrador.php" method="post"><br>
+<input type="submit" value="Volver al Inicio" class="btn btn-danger" class="boton"/>
+</form>
 </body>
 </html>

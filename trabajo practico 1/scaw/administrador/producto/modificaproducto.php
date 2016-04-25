@@ -14,27 +14,20 @@ $conexion=mysql_connect($host,$user,$pass);
 $sql="CREATE DATABASE IF NOT EXISTS precioscuidados";
 
 $inseltar=mysql_query($sql,$conexion);
-/*if(!$inseltar){
-    echo 'Error al crear la base de datos<br />';
-    }else{
-        echo 'Base de datos creada exitosamente<br />.';
-      }*/
-      $seleccion_base =mysql_select_db('precioscuidados',$conexion);
-		/*if($seleccion_base==FALSE)
-		{
-		echo 'Error al seleccionar la base<br />.';
-		} else{
-				echo 'Base seleccionada exitosamente<br />.';
-       }*/
+/*if(!$inseltar){echo 'Error al crear la base de datos<br />';}
+else{echo 'Base de datos creada exitosamente<br />.';}*/
+$seleccion_base =mysql_select_db('precioscuidados',$conexion);
+/*if($seleccion_base==FALSE)
+{echo 'Error al seleccionar la base<br />.';} 
+else{echo 'Base seleccionada exitosamente<br />.';}*/
 $consulta= mysql_query("select * from producto",$conexion)   or die ("Fallo en la consulta");
  /*if($consulta)
  echo "hola";*/
- 
-  /*while($fila = mysql_fetch_array($consulta))
+ /*while($fila = mysql_fetch_array($consulta))
    { echo $fila['descripcion'];
    echo "<br>";}*/
 ?>   
-<form action= "bajaproductobd.php" method="post">
+<form action= "modificaproductobd.php" method="post">
 
     Seleccione un producto
    <select  name="descripcion">  
@@ -50,13 +43,14 @@ $consulta= mysql_query("select * from producto",$conexion)   or die ("Fallo en l
     ?>       
 </select>
 <br><br>
-
-<input type="submit" value="Eliminar" />
+Ingrese la modificacion
+<input type="text" name= "descripcion2" value="" />
+<input type="submit" value="Modificar" />
 <input type="reset" name="limpiar" value="Reset" />
 </form>
 <br>		
-<form action= "logoutb.php" method="post"><br>
-<input type="submit" value="Salir" class="boton"/>
+<form action= "../indexAdministrador.php" method="post"><br>
+<input type="submit" value="Volver al Inicio" class="btn btn-danger" class="boton"/>
 </form>
 </body>
 </html>

@@ -38,7 +38,7 @@ $contrasenia = $_POST['contrasenia'];
 				session_start();
 				$_SESSION['log']=1;
 				$_SESSION['id'] = $id;
-				header("location: administrador.php");
+				header("location: administrador/indexAdministrador.php");
 			} 
 			else
 			{
