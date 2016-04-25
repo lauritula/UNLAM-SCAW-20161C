@@ -29,7 +29,7 @@
 			<input type="submit" class="btn btn-info" value="Modificacion" onClick="location.href = 'producto/modificaproducto.php' ">
 			<input type="submit" class="btn btn-info" value="Baja" onClick="location.href = 'producto/bajaproducto.php' ">
 			<br>
-			<br><input type="submit" class="btn btn-danger" value="Salir" onClick="location.href = '../login.php' "></br>
+			<br><input type="submit" class="btn btn-danger" value="Salir" onClick="location.href = '../logoutb.php' "></br>
  		 </div>
  		 <div class="col-sm-4">
  		 </div>

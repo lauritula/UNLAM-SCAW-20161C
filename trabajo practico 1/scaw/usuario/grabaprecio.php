@@ -24,26 +24,26 @@
 
   $conexion=mysql_connect($host,$user,$pass);
   $sql="CREATE DATABASE IF NOT EXISTS precioscuidados";
-$inseltar=mysql_query($sql,$conexion);//crea la base
+$inseltar=mysql_query($sql,$conexion)or die("Error en: " . mysql_error());//crea la base
 $seleccion_base =mysql_select_db('precioscuidados',$conexion);//selecciona la base
 //$query  = "SELECT * FROM precios WHERE descripcion = '$descripcion' and id_empleado = '$id_empleado'"; //busca el producto en la tabla
 //$consulta = mysql_query($query, $conexion);
 
 $query_existe="SELECT * FROM precios WHERE semana=$semana AND id_empleado=$id_empleado and id_producto=$id_producto";
-$result_existe = mysql_query($query_existe, $conexion);
+$result_existe = mysql_query($query_existe, $conexion)or die("Error en: " . mysql_error());
 $numero = mysql_num_rows($result_existe);
-$query_nuevo = "INSERT INTO precios VALUES ('$id_producto','$id_empleado','$descripcion','$valor','$semana')";
+$query_nuevo = "INSERT INTO precios VALUES (NULL , '$id_producto','$id_empleado','$descripcion','$valor','$semana')";
 $query_cambia = "UPDATE precios SET valor = '$valor' WHERE semana=$semana AND id_empleado=$id_empleado and id_producto=$id_producto";
 
 if($numero==0)
 {
 
-  $consulta_nuevo = mysql_query($query_nuevo, $conexion);
+  $consulta_nuevo = mysql_query($query_nuevo, $conexion)or die("Error en: " . mysql_error());
 }
 else
 {
 
-  $consulta_cambia = mysql_query($query_cambia, $conexion);
+  $consulta_cambia = mysql_query($query_cambia, $conexion)or die("Error en: " . mysql_error());
 }
 
 /*[if(!$consulta_cambia)
