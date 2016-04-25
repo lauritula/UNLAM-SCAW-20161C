@@ -1,0 +1,17 @@
+maximo
+
+select descripcion,max(valor),semana
+from precios
+group by id_producto;
+
+minimo
+
+select descripcion,min(valor),semana
+from precios
+group by id_producto;
+
+promedio
+
+select descripcion,avg(valor),semana
+from precios
+group by id_producto;
