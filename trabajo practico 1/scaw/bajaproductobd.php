@@ -32,11 +32,5 @@ if(!$consulta_cambia)
 		//header("location:cargaprecios.php");
 	}	
 ?>
-<form action= "administrador.php" method="post">
-<br><br>
-<input type="submit" value="Volver al menu"/>
-</form>	
-</body>
-</html>
 </body>
 </html>

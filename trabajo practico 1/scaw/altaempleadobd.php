@@ -47,9 +47,5 @@ else{
 	}
 }	
 ?>
-<form action= "administrador.php" method="post">
-<br><br>
-<input type="submit" value="Volver al menu"/>
-</form>	
 </body>
 </html>
