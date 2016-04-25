@@ -22,7 +22,7 @@
  		 	<h4>Usuarios</h4>
  		 	<input type="submit" class="btn btn-info" value="Alta" onClick="location.href = 'empleado/altaempleado.php' ">
 			<input type="submit" class="btn btn-info" value="Modificacion" onClick="location.href = 'empleado/modificaempleado.php' ">
-			<input type="submit" class="btn btn-info" value="Baja" onClick="location.href = 'empleado/modificaempleado.php' ">
+			<input type="submit" class="btn btn-info" value="Baja" onClick="location.href = 'empleado/bajaempleado.php' ">
 			<br>
 			<h4>Productos</h4>
  		 	<input type="submit" class="btn btn-info" value="Alta" onClick="location.href = 'producto/altaproducto.php' ">

@@ -38,7 +38,7 @@ $consulta= mysql_query("select * from producto",$conexion)   or die ("Fallo en l
      <div class="col-sm-4">
      </div>
      <div class="col-sm-4">
-      <h3>Baja de Producto</h3>
+      <h3>Modificacion de Producto</h3>
       <br>
       <form action= "modificaproductobd.php" method="post">
       Seleccione el Producto
