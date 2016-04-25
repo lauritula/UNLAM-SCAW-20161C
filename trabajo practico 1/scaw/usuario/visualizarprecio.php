@@ -28,7 +28,7 @@ $seleccion_base =mysql_select_db('precioscuidados',$conexion);//selecciona la ba
 //$query 	= "SELECT * FROM precios WHERE descripcion = '$descripcion' and id_empleado = '$id_empleado'"; //busca el producto en la tabla
 //$consulta = mysql_query($query, $conexion);
 $query_cosulta = "SELECT descripcion, MAX(valor) maximo, MIN(valor) minimo, AVG(valor) promedio FROM precios WHERE semana = '$semana' GROUP BY descripcion";  //consulta de los productos y sus precios filtrado semana actual
-$filtro_semana = mysql_query($query_cosulta, $conexion);
+$filtro_semana = mysql_query($query_cosulta, $conexion)or die("Error en: " . mysql_error());
 ?>
 
 <div class="container-fluid">

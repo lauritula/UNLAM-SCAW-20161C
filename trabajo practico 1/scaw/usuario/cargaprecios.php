@@ -53,10 +53,7 @@ echo "<br>";}*/
             echo '<option value=' . $row["id_producto"] . '-' . $row["descripcion"] . '>' . $row["descripcion"] . '</option>'; 
             } 
             echo '</select>';
-            ?>
-
-
-       
+            ?>       
     </div>
       </div>  
         <div class="form-group">
