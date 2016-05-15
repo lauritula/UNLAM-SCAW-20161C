@@ -14,6 +14,14 @@
   		<div class="col-sm-4">
   				<div class="container">
 		<h1>Precios cuidados</h1>
+		<div class="row">
+				  <div class="col-sm-5">
+				  	<form action= "publico/indexPublico.php" method="post">
+				  	<input type="submit" class="btn btn-warning btn-block" value="Ingreso como Acceso p&uacute;blico" class="boton"/>
+				  </form>
+				  </div>
+		</div>
+
 		<form action= "filtro.php" method="post" class="form-horizontal">
 			<div class="form-group">
 		      <label class="control-label col-sm-2" for="email">Numero de  Usuario</label>
