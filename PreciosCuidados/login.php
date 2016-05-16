@@ -22,7 +22,7 @@
 				  </div>
 		</div>
 
-		<form action= "filtro.php" method="post" class="form-horizontal">
+		<form action= "filtro.php" method="post" class="form-horizontal" autocomplete="off">
 			<div class="form-group">
 		      <label class="control-label col-sm-2" for="email">Numero de  Usuario</label>
 		      <div class="col-sm-2">
