@@ -17,7 +17,7 @@
 		<div class="row">
 				  <div class="col-sm-5">
 				  	<form action= "publico/indexPublico.php" method="post">
-				  	<input type="submit" class="btn btn-warning btn-block" value="Ingreso como Acceso p&uacute;blico" class="boton"/>
+				  	<input type="submit" class="btn btn-warning btn-block" value="Ingreso como invitado" class="boton"/>
 				  </form>
 				  </div>
 		</div>
