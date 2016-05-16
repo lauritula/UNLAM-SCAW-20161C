@@ -80,7 +80,13 @@ CREATE TABLE `empleado` (
 
 INSERT INTO `empleado` (`id_empleado`, `nombre`, `apellido`, `estado`) VALUES
 (0, 'Anonimo', 'Anonimo', 'efectivo'),
-(2, 'Cristian', 'Perez', 'efectivo');
+(2, 'Julio', 'Reinoso', 'efectivo'),
+(3, 'Elizabeth', 'Perez', 'efectivo'),
+(4, 'Lucia', 'Reinoso', 'efectivo'),
+(5, 'Miriam', 'Reinoso', 'efectivo'),
+(7, 'Pedro', 'Picapiedra', 'efectivo'),
+(8, 'Juan', 'Peron', 'efectivo'),
+(9, 'Tony', 'Stark', 'efectivo');
 
 -- --------------------------------------------------------
 
@@ -172,9 +178,15 @@ CREATE TABLE `usuario` (
 --
 
 INSERT INTO `usuario` (`id`, `rol`, `contrasenia`) VALUES
-(0, 'empleado', 'anonimo'),
-(1, 'administrador', 'uno'),
-(2, 'empleado', 'dos');
+(0, 'empleado', '$2y$12$2XF2zWvzfh3tB/MF9y0RPuS3CiwvID6F5ZKc0PpQk11d2hPzxApmu'),
+(1, 'administrador', '$2y$12$2XF2zWvzfh3tB/MF9y0RPuS3CiwvID6F5ZKc0PpQk11d2hPzxApmu'),
+(2, 'empleado', '$2y$12$XXmCeXW5XBraTeWVoTElg.DkeuRtb3kH.Agu1s5Ao/Bp8N5/IDYp2'),
+(3, 'empleado', '$2y$12$FyxhV2g08m6tLPumr1Bmte0FORSGOISQfMdIfFwTBCMwBQIhev9iu'),
+(4, 'empleado', '$2y$12$ZEJuhfmOaxroLnyn.SvZouo2MXSjTeJwsYljq6xnHOLPrz01LNP8G'),
+(5, 'empleado', '$2y$12$g5se.0HTq2wG8.VInalzA.sf6/Gx2FpLEVmomqxssTlwNzrrr5MCy'),
+(7, 'empleado', '$2y$12$B5BkClAjSFkE6YLIdFevVuzJ4czuMbVtn46ldQ5XKXK5sni1LJMVq'),
+(8, 'empleado', '$2y$12$0NSSdoTFKVlPBMjn8swsRe5fDUdiq/Z45HnKYmXeRFxlkOQ.4tJNu'),
+(9, 'empleado', '$2y$12$IDWu1dgzcUOFsleKDCCRb.7sZNEw4jupXaRUfZ1qSGtFojrL0UeyW');
 
 --
 -- Índices para tablas volcadas
