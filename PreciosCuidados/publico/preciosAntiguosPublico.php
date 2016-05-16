@@ -83,21 +83,7 @@
                       }
                       ?>
                       
-                     <div class="col-sm-16">
-                     
-                          <form action= "preciosAntiguosPublico.php" method="post"><br>
-                            <div class="form-group">
-                             <label class="control-label col-sm-16" for="email"> Ingrese su comentario</label>
-                               <div class="col-sm-16">
-                                  <textarea class="form-control" rows="3" name="comentario"></textarea>
-                               </div>
-                            </div>
-                            <div class="col-sm-4">
-                              <br><input type="submit" class="btn btn-info" value="Envìar comentario" class="boton"/></br>
-                            </div>
-                         </form>
-                     </div>
-                  </div>
+                      
                 <br><input type="submit" class="btn btn-danger" value="Volver" onClick="location.href = 'visualizacionPublicaSemanalAnterior.php' "></br>
               </div>
            </div>
