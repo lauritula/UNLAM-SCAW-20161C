@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 16-05-2016 a las 01:07:33
+-- Tiempo de generación: 16-05-2016 a las 19:34:29
 -- Versión del servidor: 10.1.13-MariaDB
 -- Versión de PHP: 5.6.20
 
@@ -81,12 +81,7 @@ CREATE TABLE `empleado` (
 INSERT INTO `empleado` (`id_empleado`, `nombre`, `apellido`, `estado`) VALUES
 (0, 'Anonimo', 'Anonimo', 'efectivo'),
 (2, 'Julio', 'Reinoso', 'efectivo'),
-(3, 'Elizabeth', 'Perez', 'efectivo'),
-(4, 'Lucia', 'Reinoso', 'efectivo'),
-(5, 'Miriam', 'Reinoso', 'efectivo'),
-(7, 'Pedro', 'Picapiedra', 'efectivo'),
-(8, 'Juan', 'Peron', 'efectivo'),
-(9, 'Tony', 'Stark', 'efectivo');
+(3, 'Elizabeth', 'Perez', 'efectivo');
 
 -- --------------------------------------------------------
 
@@ -170,7 +165,7 @@ INSERT INTO `producto` (`id_producto`, `descripcion`) VALUES
 CREATE TABLE `usuario` (
   `id` int(11) NOT NULL,
   `rol` varchar(15) NOT NULL,
-  `contrasenia` varchar(50) NOT NULL
+  `contrasenia` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -178,15 +173,10 @@ CREATE TABLE `usuario` (
 --
 
 INSERT INTO `usuario` (`id`, `rol`, `contrasenia`) VALUES
-(0, 'empleado', '$2y$12$2XF2zWvzfh3tB/MF9y0RPuS3CiwvID6F5ZKc0PpQk11d2hPzxApmu'),
-(1, 'administrador', '$2y$12$2XF2zWvzfh3tB/MF9y0RPuS3CiwvID6F5ZKc0PpQk11d2hPzxApmu'),
-(2, 'empleado', '$2y$12$XXmCeXW5XBraTeWVoTElg.DkeuRtb3kH.Agu1s5Ao/Bp8N5/IDYp2'),
-(3, 'empleado', '$2y$12$FyxhV2g08m6tLPumr1Bmte0FORSGOISQfMdIfFwTBCMwBQIhev9iu'),
-(4, 'empleado', '$2y$12$ZEJuhfmOaxroLnyn.SvZouo2MXSjTeJwsYljq6xnHOLPrz01LNP8G'),
-(5, 'empleado', '$2y$12$g5se.0HTq2wG8.VInalzA.sf6/Gx2FpLEVmomqxssTlwNzrrr5MCy'),
-(7, 'empleado', '$2y$12$B5BkClAjSFkE6YLIdFevVuzJ4czuMbVtn46ldQ5XKXK5sni1LJMVq'),
-(8, 'empleado', '$2y$12$0NSSdoTFKVlPBMjn8swsRe5fDUdiq/Z45HnKYmXeRFxlkOQ.4tJNu'),
-(9, 'empleado', '$2y$12$IDWu1dgzcUOFsleKDCCRb.7sZNEw4jupXaRUfZ1qSGtFojrL0UeyW');
+(0, 'empleado', '$2y$12$0q9TyzWtI7WgmE1FWUMwf.IPxF0jlFZ9dbyaZKWc9hoofjYmsI1d.'),
+(1, 'administrador', '$2y$12$FtsJ.hfipfZcB2MLgHX5f.A7pHvq5QJGMIdK3r5USfVViJSi.l.Wi'),
+(2, 'empleado', '$2y$12$mWGGHLWsyeW1yy9etD1t4e/zBzMzpcqZbM1i4YXL7bCF4QSmiUc0a'),
+(3, 'empleado', '$2y$12$rS.qFOoaGwgRlZRUTw62y.qZgZiaXXKfEra3UpPOwvCXhTeoCxpWu');
 
 --
 -- Índices para tablas volcadas
@@ -246,7 +236,7 @@ ALTER TABLE `comentarios`
 -- AUTO_INCREMENT de la tabla `empleado`
 --
 ALTER TABLE `empleado`
-  MODIFY `id_empleado` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_empleado` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT de la tabla `precios`
 --
@@ -261,7 +251,7 @@ ALTER TABLE `producto`
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 --
 -- Restricciones para tablas volcadas
 --
