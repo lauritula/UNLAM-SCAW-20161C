@@ -38,16 +38,16 @@ $filtro_semana = mysql_query($query_cosulta, $conexion);
         <h3>Visualizaci&oacute;n de precios antiguos</h3>
             <form action= "preciosAntiguosPublico.php" method="post"><br>
            <div class="form-group">
-             <label class="control-label col-sm-6" for="email"> Ingrese semana a consultar (formato SS) </label>
-            <div class="col-sm-4">
+             <label class="control-label col-sm-16" for="email"> Ingrese semana a consultar (formato SS) </label>
+            <div class="col-sm-14">
                <input type="text"  name="semanaConsulta" value=""/> 
              </div>
          </div>
-           <div class="col-sm-4">
+           <div class="col-sm-6">
              <br><input type="submit" class="btn btn-info" value="Consultar" class="boton"/></br>
             </div>
           </form> 
-             <div class="col-sm-4">
+             <div class="col-sm-8">
                <br><input type="submit" class="btn btn-danger" value="Volver" onClick="location.href = 'indexPublico.php' "></br>
               </div>
             </div>
