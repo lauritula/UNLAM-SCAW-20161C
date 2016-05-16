@@ -43,7 +43,7 @@ while($fila=mysql_fetch_array($consulta))
      <div class="col-sm-4">
       <h3>Modificacion de Empleado</h3>
       <br>
-      <form action= "modificaempleadobd.php" method="post">
+      <form action= "modificaempleadobd.php" method="post" autocomplete="off">
       <input type='hidden' id="id_empleado" name='id_empleado' value="<?php echo $id_empleado;?>" />
       <input type='hidden' id="nombre" name='nombre' value="<?php echo $nom;?>" />
       <input type='hidden' id="apellido" name='apellido' value="<?php echo $ape;?>" />

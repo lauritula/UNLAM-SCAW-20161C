@@ -41,7 +41,7 @@ echo "<br>";}*/
      </div>
      <div class="col-sm-4">
       <h3>Carga / Actualizacion de precios</h3>
-           <form action= "grabaprecio.php" method="post" class="form-horizontal">
+           <form action= "grabaprecio.php" method="post" class="form-horizontal" autocomplete="off">
             <div class="form-group">
           <label class="control-label col-sm-6" for="email">  Seleccione un producto a cargar / actualizar</label>
            <div class="col-sm-4">

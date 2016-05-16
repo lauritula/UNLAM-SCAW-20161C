@@ -47,7 +47,7 @@ $consulta= mysql_query("select * from producto",$conexion)   or die ("Fallo en l
      <div class="col-sm-4">
       <h3>Baja de Producto</h3>
       <br>
-      <form action= "bajaproductobd.php" method="post">
+      <form action= "bajaproductobd.php" method="post" autocomplete="off">
       Seleccione el Producto
       <select  name="descripcion">  
             <?php    

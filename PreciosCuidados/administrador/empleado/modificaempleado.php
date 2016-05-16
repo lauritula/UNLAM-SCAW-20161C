@@ -40,7 +40,7 @@ $consulta= mysql_query("select * from empleado",$conexion)   or die ("Fallo en l
      <div class="col-sm-4">
       <h3>Modificacion de Empleado</h3>
       <br>
-      <form action= "modificaempleado2.php" method="post">
+      <form action= "modificaempleado2.php" method="post" autocomplete="off">
 
     Seleccione un empleado
          <select  name="id_empleado">  

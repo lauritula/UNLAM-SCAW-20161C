@@ -86,7 +86,7 @@ $filtro_semana = mysql_query($query_cosulta, $conexion)or die("Error en: " . mys
       
            <div class="col-sm-16">
                      
-                          <form action= "altaComentarioUsuario.php" method="post"><br>
+                          <form action= "altaComentarioUsuario.php" method="post" autocomplete="off"><br>
                             <div class="form-group">
                              <label class="control-label col-sm-16" for="email"> Ingrese su comentario</label>
                                <div class="col-sm-16">

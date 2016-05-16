@@ -17,7 +17,7 @@
  		 <div class="col-sm-4">
  		 	<h3>Alta de Producto</h3>
  		 	<br>
- 		 	<form action= "altaproductobd.php" method="post">
+ 		 	<form action= "altaproductobd.php" method="post" autocomplete="off">
 			Ingrese el producto
 			<input type="text" name="descripcion" />
 			<input type="submit" class="btn btn-info" value="Guardar" />

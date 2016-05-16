@@ -36,7 +36,7 @@ $filtro_semana = mysql_query($query_cosulta, $conexion);
 
        <div class="col-sm-4">
         <h3>Visualizaci&oacute;n de precios antiguos</h3>
-            <form action= "preciosAntiguosPublico.php" method="post"><br>
+            <form action= "preciosAntiguosPublico.php" method="post" autocomplete="off"><br>
            <div class="form-group">
              <label class="control-label col-sm-16" for="email"> Ingrese semana a consultar (formato SS) </label>
             <div class="col-sm-14">

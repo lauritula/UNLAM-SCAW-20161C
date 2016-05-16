@@ -16,7 +16,7 @@
  		 </div>
  		 <div class="col-sm-4">
  		 	<h3>Alta de Empleado</h3>
- 		 	<form action= "altaempleadobd.php" method="post">
+ 		 	<form action= "altaempleadobd.php" method="post" autocomplete="off">
 			Nombre
 			<input type="text" name="nombre" />
 			<br><br>
