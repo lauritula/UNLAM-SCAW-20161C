@@ -17,6 +17,7 @@ session_start();
 $host='localhost';
 $user='root';
 $pass='';
+$id = $_SESSION['id'];
 
 
 $semana= date("W");
@@ -29,6 +30,12 @@ $seleccion_base =mysql_select_db('precioscuidados',$conexion);//selecciona la ba
 //$consulta = mysql_query($query, $conexion);
 $query_cosulta = "SELECT descripcion, MAX(valor) maximo, MIN(valor) minimo, AVG(valor) promedio FROM precios WHERE semana = '$semana' GROUP BY descripcion";  //consulta de los productos y sus precios filtrado semana actual
 $filtro_semana = mysql_query($query_cosulta, $conexion)or die("Error en: " . mysql_error());
+?>
+
+<?php
+                
+    $query_cosulta_comentario = "SELECT comentarios.texto , empleado.nombre, comentarios.fecha_hora FROM comentarios INNER JOIN empleado ON comentarios.id_comentarista = empleado.id_empleado where comentarios.semana = '$semana'";  //consulta de los productos y sus precios filtrado semana actual
+    $filtro_comentario = mysql_query($query_cosulta_comentario, $conexion) or die ("Error en: " . mysql_error());
 ?>
 
 <div class="container-fluid">
@@ -53,12 +60,49 @@ $filtro_semana = mysql_query($query_cosulta, $conexion)or die("Error en: " . mys
   } 
   else 
     { 
-      echo "¡ No se ha encontrado ningún registro !";
+     echo '<div class="alert alert-warning">¡ No se ha encontrado ningún registro !</div>';
     }
       ?>
-      <br><input type="submit" class="btn btn-info" value="Consulta semanas anteriores" onClick="location.href = 'filtroSemana.php' "></br>
-    <br><input type="submit" class="btn btn-danger" value="Volver" onClick="location.href = 'indexUsuario.php' "></br>
-    
+
+
+     <h3>Comentarios</h3>
+                        <?php
+                        if ($row = mysql_fetch_array($filtro_comentario))
+                        {
+                         echo "<table class='table table-bordered'> \n";
+                         echo "<tr><td>Comentario</td><td>Nombre</td><td>Fecha</td></tr> \n";
+                         do 
+                         { 
+                          echo "<tr><td>".$row["texto"]."</td><td>".$row["nombre"]."</td><td>".$row["fecha_hora"]."</td></tr> \n"; 
+                        } 
+                        while ($row = mysql_fetch_array($filtro_comentario)); echo "</table> \n";
+
+                      } 
+                      else 
+                      { 
+                         echo '<div class="alert alert-warning">¡ No se ha encontrado ningún registro !</div>';
+                      }
+                      ?>
+      
+           <div class="col-sm-16">
+                     
+                          <form action= "altaComentarioUsuario.php" method="post"><br>
+                            <div class="form-group">
+                             <label class="control-label col-sm-16" for="email"> Ingrese su comentario</label>
+                               <div class="col-sm-16">
+                                  <textarea class="form-control" rows="3" name="comentario"></textarea>
+                               </div>
+                            </div>
+                            <div class="col-sm-6">
+                              <br><input type="submit" class="btn btn-info" value="Envìar comentario" class="boton"/></br>
+                            </div>
+
+                         </form>
+                      <div class="col-sm-6">
+                        <br><input type="submit" class="btn btn-danger" value="Volver" onClick="location.href = 'indexUsuario.php' "></br>
+                     </div>
+                    </div>
+         
     </div>
   </div>
 

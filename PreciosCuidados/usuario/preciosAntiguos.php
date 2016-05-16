@@ -29,6 +29,13 @@
             $filtro_semana = mysql_query($query_cosulta, $conexion);
             ?>
 
+            <?php
+                
+            $query_cosulta_comentario = "SELECT comentarios.texto , empleado.nombre, comentarios.fecha_hora FROM comentarios INNER JOIN empleado ON comentarios.id_comentarista = empleado.id_empleado where comentarios.semana = '$semana'";  //consulta de los productos y sus precios filtrado semana actual
+            $filtro_comentario = mysql_query($query_cosulta_comentario, $conexion) or die ("Error en: " . mysql_error());
+          ?>
+
+
             <div class="container-fluid">
               <div class="row">
 
@@ -51,11 +58,30 @@
               } 
               else 
               { 
-                echo "¡ No se ha encontrado ningún registro !";
+                        echo '<div class="alert alert-warning">¡ No se ha encontrado ningún registro !</div>';
               }
               ?>
-              <br><input type="submit" class="btn btn-info" value="Consultar por la semana actual" onClick="location.href = 'visualizarPrecio.php' "></br>
-              <br><input type="submit" class="btn btn-info" value="Consultar por otra semana" onClick="location.href = 'filtroSemana.php' "></br>
+
+               <h3>Comentarios</h3>
+                        <?php
+                        if ($row = mysql_fetch_array($filtro_comentario))
+                        {
+                         echo "<table class='table table-bordered'> \n";
+                         echo "<tr><td>Comentario</td><td>Nombre</td><td>Fecha</td></tr> \n";
+                         do 
+                         { 
+                          echo "<tr><td>".$row["texto"]."</td><td>".$row["nombre"]."</td><td>".$row["fecha_hora"]."</td></tr> \n"; 
+                        } 
+                        while ($row = mysql_fetch_array($filtro_comentario)); echo "</table> \n";
+
+                      } 
+                      else 
+                      { 
+                         echo '<div class="alert alert-warning">¡ No se ha encontrado ningún registro !</div>';
+                      }
+                      ?>
+
+              
               <br><input type="submit" class="btn btn-danger" value="Volver" onClick="location.href = 'indexUsuario.php' "></br>
 
             </div>
