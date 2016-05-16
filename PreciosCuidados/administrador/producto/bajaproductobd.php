@@ -39,7 +39,7 @@ $seleccion_base =mysql_select_db('precioscuidados',$conexion);//selecciona la ba
 							
 					if(!$consulta_cambia)
 					{
-						echo 'No se pudo eliminar el producto';
+						 echo '<div class="alert alert-warning">¡ No se pudo eliminar el producto !</div>';
 					}
 					else
 					{

@@ -54,7 +54,7 @@ $fila = mysql_fetch_array($consulta);
 
 					if(!$consulta_cambia || !$consulta_cambia2)
 					{
-						echo 'Ingreso fallido';
+						 echo '<div class="alert alert-warning">¡ Ingreso fallido !</div>';;
 					}
 					else
 					{

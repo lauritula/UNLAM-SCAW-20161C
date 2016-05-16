@@ -37,12 +37,12 @@ $seleccion_base =mysql_select_db('precioscuidados',$conexion);//selecciona la ba
 				$consulta_cambia = mysql_query($query_cambia, $conexion) or die("Error en: " . mysql_error());
 				if(!$consulta_cambia)
 				{
-					echo 'No se pudo eliminar el empleado';
+					 echo '<div class="alert alert-warning">¡ No se pudo eliminar el empleado !</div>';
 				}
 					else
 					{
 						echo"<br>"; 
-						echo 'Empleado eliminado con exito';
+						 echo '<div class="alert alert-warning">¡ Empleado eliminado con exito !</div>';
 						//header("location:cargaprecios.php");
 					}	
              ?>

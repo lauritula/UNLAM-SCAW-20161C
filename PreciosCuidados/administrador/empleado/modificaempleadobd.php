@@ -40,12 +40,12 @@ $seleccion_base =mysql_select_db('precioscuidados',$conexion);//selecciona la ba
 										
 				if(!$consulta_cambia)
 				{
-					echo 'Ingreso fallido';
+					 echo '<div class="alert alert-warning">¡ Ingreso fallido !</div>';
 				}
 					else
 					{
 						echo"<br>"; 
-						echo 'Empleado modificado con exito';
+						 echo '<div class="alert alert-warning">¡ Empleado modificado con exito !</div>';
 						//header("location:cargaprecios.php");
 					}	
              ?>

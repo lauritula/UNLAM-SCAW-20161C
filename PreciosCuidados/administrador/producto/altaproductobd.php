@@ -38,7 +38,7 @@ $cant = mysql_num_rows($consulta);
              <?php
              if ($cant != 0) 
 				{ //YA EXISTE
-					echo "Error: Producto repetido"; 
+					 echo '<div class="alert alert-warning">¡ Error : producto repetido !</div>';
 					//header("location:altacliente.php"); 
 				}
 				else
@@ -48,7 +48,7 @@ $cant = mysql_num_rows($consulta);
 							
 					if(!$consulta_cambia)
 					{
-						echo 'Ingreso fallido';
+						 echo '<div class="alert alert-warning">¡ Ingreso fallido !</div>';
 					}
 					else
 					{
