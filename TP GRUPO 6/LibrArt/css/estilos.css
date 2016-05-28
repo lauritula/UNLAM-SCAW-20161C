@@ -1,0 +1,82 @@
+.fondoIndex1{
+  background: url(../img/fondo.jpg) no-repeat center center fixed;
+  background-size: cover; 
+  -moz-background-size: cover; 
+  -webkit-background-size: cover; 
+  -o-background-size: cover;
+}
+
+.fondoIndex2{
+  background: url(../img/fondo.jpg) no-repeat center center fixed;
+  background-size: cover; 
+  -moz-background-size: cover; 
+  -webkit-background-size: cover; 
+  -o-background-size: cover;
+}
+
+.loginCentrado {
+  position: absolute;
+  width: 500px;
+  height: auto;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.85);
+  text-align: center;
+}
+
+.comentario-textArea {
+  width: 500px;
+}
+
+.map-responsive{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+}
+.map-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+
+.img_navbar{
+    max-height: 50px;
+}
+
+
+.jumbotron .letra-chica p {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.jumbotron .letra-media span {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.jumbotron .letra-menor p {
+    font-size: 12px;
+    margin-bottom: 8px;
+}
+
+.datos span {
+    font-family: "Copperplate","Copperplate Gothic Light",sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    vertical-align: middle;
+}
+
+.modal-body h5 {
+    color: #0f0669;
+}
+
+.gi-2x{font-size: 20px;}
+.gi-3x{font-size: 30px;}
+.gi-4x{font-size: 40px;}
+.gi-5x{font-size: 50px;}
+
