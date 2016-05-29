@@ -17,10 +17,11 @@ INCLUDE 'include/conexion.php';
 				return (key >= 48 && key <= 57)
 			}
 		</script>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 	</head>
 	<body class="fondoIndex1">
 		<div class="container jumbotron hero-spacer">
-			<form method="post" action="abm_usuario_reg.php" name="altausuario" id="altausuario">
+			<form method="post" action="abm_usuario_reg.php" name="altausuario" id="altausuario" autocomplete="off">
 				<h2>Alta de Usuario</h2>
 				<table class="table" align="center">
 					<tr>

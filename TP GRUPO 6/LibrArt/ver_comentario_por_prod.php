@@ -9,6 +9,7 @@ INCLUDE 'include/conexion.php';
 
 		<LINK REL=StyleSheet HREF="estilos/estilos.css" TYPE="text/css" MEDIA=screen>
 		<script language="JavaScript" src="js/historial_semanal.js"></script> 
+
 	</head>
 
 <body>

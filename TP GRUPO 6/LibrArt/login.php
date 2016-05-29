@@ -16,6 +16,7 @@ session_destroy();
 			return (key >= 48 && key <= 57)
 		}
 	</script>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
  </HEAD>
 
  <BODY class="fondoIndex1">
@@ -24,10 +25,10 @@ session_destroy();
 		 
 		<form method="post" action="validausuario.php" name="formlogin" id="formlogin" autocomplete="off">
 			<h5>Documento</h5>
-			<input class="input"  type="text" name="usuario" id="usuario" onKeyPress="return soloNumeros(event)"/>
+			<input class="input"  type="text" name="usuario" id="usuario" onKeyPress="return soloNumeros(event)" autocomplete="off"/>
 		
 			<h5>Contrase&ntilde;a</h5>
-			<input class="input" type="password"  name="pass" id="pass"/>
+			<input class="input" type="password"  name="pass" id="pass" autocomplete="off"/>
 			<br/><br/>
 			
 			<input class="button-primary" type="button" onclick="javascript:validar();"  value="Ingresar" />

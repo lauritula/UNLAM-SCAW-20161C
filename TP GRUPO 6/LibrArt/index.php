@@ -9,6 +9,7 @@
 		<script src="js/jquery.min.js"></script>
 		<script src="js/main.js" type="text/javascript"></script>  
 		<script src="js/menu.js" type="text/javascript"></script> 
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 	</head>
 	<body class="fondoIndex1">
 		<div >

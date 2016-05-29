@@ -1,6 +1,7 @@
 <html>
 <head>
 <script language="JavaScript" src="js/menu.js"></script> 
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 </head>
 <body>
 <?php

@@ -15,6 +15,7 @@
 	    <!-- Custom CSS -->
 	    <link href="css/heroic-features.css" rel="stylesheet">
 	    <link href="css/estilos.css" rel="stylesheet">
+	    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 	</head>
 
 	<body class="fondoIndex1">

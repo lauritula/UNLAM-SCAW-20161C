@@ -23,7 +23,7 @@ echo "</select>";
 ?>
 		<h3>Ingrese un comentario:</h3>
 
-		<textarea class="comentario-textArea" type="" name="txtComentario" id="txtComentario" rows="3" ></textarea><br/><br/>
+		<textarea class="comentario-textArea" type="" name="txtComentario" id="txtComentario" rows="3" autocomplete="off"></textarea><br/><br/>
 		<!--<input type="text" name="txtComentario" id="txtComentario"/>-->
 		<input class="button-primary" type="button" onclick="javascript:validar();" value="Comentar" align="center"/>
 		</div>
