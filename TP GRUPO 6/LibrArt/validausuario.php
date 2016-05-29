@@ -11,7 +11,9 @@ INCLUDE 'include/conexion.php';
 
 session_start();
 $usuario = $_POST["usuario"];
+$usuario = addslashes($_POST["usuario"]);
 $pass = $_POST["pass"];
+$pass = addslashes($_POST["pass"]);
 
 $passEncriptada = md5($pass);
 conectar_mysql("localhost","root","","libreria");
