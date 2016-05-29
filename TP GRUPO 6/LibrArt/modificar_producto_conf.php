@@ -25,7 +25,7 @@ else
 mysql_free_result($resultado);
 
 ?>
-<form method="post" action="abm_producto.php" name="modificaproducto" id="modificaproducto">
+<form method="post" action="abm_producto.php" name="modificaproducto" id="modificaproducto" autocomplete="off">
 
  <table align="center">
  <tr>

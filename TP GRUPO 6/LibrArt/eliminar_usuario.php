@@ -2,7 +2,7 @@
 include 'superior.php';
 echo "<script language='JavaScript' src='js/eliminar_usuario.js'></script>"; 
 ?>
-	<form method="post" action="eliminar_usuario_conf.php" name="eliminarusuario" id="eliminarusuario">
+	<form method="post" action="eliminar_usuario_conf.php" name="eliminarusuario" id="eliminarusuario" autocomplete="off">
 
 		<table align="center">
 			<tr>

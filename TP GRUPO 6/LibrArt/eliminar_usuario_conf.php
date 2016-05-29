@@ -23,7 +23,7 @@ else
 mysql_free_result($resultado);
 ?>
 
-	<form method="post" action="abm_usuario.php" name="eliminausuario" id="eliminausuario">
+	<form method="post" action="abm_usuario.php" name="eliminausuario" id="eliminausuario" autocomplete="off">
 
 		<table class="table " align="center">
 			<tr>

@@ -2,7 +2,7 @@
 include 'superior.php';
 echo "<script language='JavaScript' src='js/alta_usuario.js'></script> ";
 ?>
-	<form method="post" action="abm_usuario.php" name="altausuario" id="altausuario">
+	<form method="post" action="abm_usuario.php" name="altausuario" id="altausuario" autocomplete="off">
 
 		<table class="table " align="center">
 		 	<tr>

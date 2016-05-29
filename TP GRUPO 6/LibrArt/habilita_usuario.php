@@ -4,7 +4,7 @@ include 'superior.php';
 echo "<script language='JavaScript' src='js/habilita_usuario.js'></script>";
 ?> 
 
-<form method="post" action="habilita_usuario_conf.php" name="habUsuario" id="habUsuario">
+<form method="post" action="habilita_usuario_conf.php" name="habUsuario" id="habUsuario" autocomplete="off">
 
 <h3>Usuarios para habilitar</h3>
 <?php

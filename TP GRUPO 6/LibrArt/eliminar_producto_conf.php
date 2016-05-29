@@ -23,7 +23,7 @@ else
 mysql_free_result($resultado);
 ?>
 
-	<form method="post" action="abm_producto.php" name="eliminaproducto" id="eliminaproducto">
+	<form method="post" action="abm_producto.php" name="eliminaproducto" id="eliminaproducto" autocomplete="off">
 
 		<table align="center">
 			<tr>

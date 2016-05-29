@@ -13,7 +13,7 @@ INCLUDE 'include/conexion.php';
 
 <body>
 
-	<form method="post" action="historial_semanal_resp.php" name="histSemanal" id="histSemanal">
+	<form method="post" action="historial_semanal_resp.php" name="histSemanal" id="histSemanal" autocomplete="off">
 
 		<table align="center">
 			<tr>

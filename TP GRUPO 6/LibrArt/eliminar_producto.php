@@ -3,7 +3,7 @@ include 'superior.php';
 echo "<script language='JavaScript' src='js/eliminar_producto.js'></script> ";
 ?>
 
-	<form method="post" action="eliminar_producto_conf.php" name="eliminarproducto" id="eliminarproducto">
+	<form method="post" action="eliminar_producto_conf.php" name="eliminarproducto" id="eliminarproducto" autocomplete="off">
 
 		<table align="center">
 			<tr>

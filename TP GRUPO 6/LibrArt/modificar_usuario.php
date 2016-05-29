@@ -4,7 +4,7 @@ echo "<script language='JavaScript' src='js/modificar_usuario.js'></script> ";
 ?>
 
 
-<form method="post" action="modificar_usuario_conf.php" name="modifusuario" id="modifusuario">
+<form method="post" action="modificar_usuario_conf.php" name="modifusuario" id="modifusuario" autocomplete="off">
 
  <table align="center">
  <tr>

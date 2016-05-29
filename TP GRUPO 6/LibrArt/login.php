@@ -22,7 +22,7 @@ session_destroy();
 
 	<div class="loginCentrado">
 		 
-		<form method="post" action="validausuario.php" name="formlogin" id="formlogin">
+		<form method="post" action="validausuario.php" name="formlogin" id="formlogin" autocomplete="off">
 			<h5>Documento</h5>
 			<input class="input"  type="text" name="usuario" id="usuario" onKeyPress="return soloNumeros(event)"/>
 		

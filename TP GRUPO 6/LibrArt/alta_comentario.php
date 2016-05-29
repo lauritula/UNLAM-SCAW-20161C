@@ -10,7 +10,7 @@ $squery = "select * from producto";
 $productos = ejecutar_sql($squery);
 
 
-echo "<form method='post' action='abm_comentario.php' name='altaComentario' id='altaComentario'>";
+echo "<form method='post' action='abm_comentario.php' name='altaComentario' id='altaComentario' autocomplete='off'>";
 echo "<div align='center'>
 	  	<h2>Elija un producto:</h2>";
 
