@@ -50,6 +50,15 @@ INCLUDE 'include/conexion.php';
 							<input class="u-full-width" type="password" name="clave" id="clave" value="" size="20" maxlength="20"/>
 						</td>
 					</tr>
+
+					<tr>
+						<td class="tablaForm">
+							<p>Frase privada:</p>
+						</td>
+						<td class="tablaForm"> 
+							<input class="u-full-width" type="password" name="passphrases" id="passphrases" value="" size="20" maxlength="200"/>
+						</td>
+					</tr>
 				</table>
 				<div align="center">
 					<input class="button-primary" type="button" onclick="javascript:validar();" value="Enviar" align="center"/>

@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.4.12
+-- version 4.5.1
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 16-05-2016 a las 04:31:38
--- Versión del servidor: 5.6.25
--- Versión de PHP: 5.6.11
+-- Tiempo de generación: 13-06-2016 a las 01:48:40
+-- Versión del servidor: 10.1.13-MariaDB
+-- Versión de PHP: 5.6.20
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -26,13 +26,13 @@ SET time_zone = "+00:00";
 -- Estructura de tabla para la tabla `comentarios`
 --
 
-CREATE TABLE IF NOT EXISTS `comentarios` (
+CREATE TABLE `comentarios` (
   `idComentario` int(11) NOT NULL,
   `detalle` varchar(1000) NOT NULL,
   `fecha` datetime NOT NULL,
   `idProducto` int(11) NOT NULL,
   `idUsuario` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `comentarios`
@@ -54,7 +54,7 @@ INSERT INTO `comentarios` (`idComentario`, `detalle`, `fecha`, `idProducto`, `id
 -- Estructura de tabla para la tabla `producto`
 --
 
-CREATE TABLE IF NOT EXISTS `producto` (
+CREATE TABLE `producto` (
   `pr_codigo` int(11) NOT NULL,
   `pr_descripcion` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -75,14 +75,14 @@ INSERT INTO `producto` (`pr_codigo`, `pr_descripcion`) VALUES
 -- Estructura de tabla para la tabla `producto_precio`
 --
 
-CREATE TABLE IF NOT EXISTS `producto_precio` (
+CREATE TABLE `producto_precio` (
   `pp_codigo` int(11) NOT NULL,
   `pp_codigo_prod` int(11) DEFAULT NULL,
   `pp_precio` float DEFAULT NULL,
   `pp_fecha_cambio` date DEFAULT NULL,
   `pp_semana` int(11) DEFAULT NULL,
   `pp_usuario` varchar(20) DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `producto_precio`
@@ -104,7 +104,7 @@ INSERT INTO `producto_precio` (`pp_codigo`, `pp_codigo_prod`, `pp_precio`, `pp_f
 -- Estructura de tabla para la tabla `rol`
 --
 
-CREATE TABLE IF NOT EXISTS `rol` (
+CREATE TABLE `rol` (
   `ro_codigo` int(11) NOT NULL,
   `ro_descripcion` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -123,22 +123,23 @@ INSERT INTO `rol` (`ro_codigo`, `ro_descripcion`) VALUES
 -- Estructura de tabla para la tabla `usuario`
 --
 
-CREATE TABLE IF NOT EXISTS `usuario` (
+CREATE TABLE `usuario` (
   `us_login` varchar(20) NOT NULL,
   `us_password` varchar(30) NOT NULL,
   `us_rol` int(11) NOT NULL,
   `us_nombre` varchar(30) NOT NULL,
-  `us_habilitado` char(1) NOT NULL
+  `us_habilitado` char(1) NOT NULL,
+  `passphrases` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `usuario`
 --
 
-INSERT INTO `usuario` (`us_login`, `us_password`, `us_rol`, `us_nombre`, `us_habilitado`) VALUES
-('11222333', '1234', 2, 'Fernando', 'N'),
-('22777888', '123456', 1, 'pepe', 'S'),
-('28734996', '123456', 2, 'Ricardo', 'S');
+INSERT INTO `usuario` (`us_login`, `us_password`, `us_rol`, `us_nombre`, `us_habilitado`, `passphrases`) VALUES
+('11222333', '1234', 2, 'Fernando', 'N', 'mdsei'),
+('22777888', '123456', 1, 'pepe', 'S', 'mdsei'),
+('28734996', '123456', 2, 'Ricardo', 'S', 'mdsei');
 
 --
 -- Índices para tablas volcadas
@@ -184,12 +185,12 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de la tabla `comentarios`
 --
 ALTER TABLE `comentarios`
-  MODIFY `idComentario` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=23;
+  MODIFY `idComentario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 --
 -- AUTO_INCREMENT de la tabla `producto_precio`
 --
 ALTER TABLE `producto_precio`
-  MODIFY `pp_codigo` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=9;
+  MODIFY `pp_codigo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 --
 -- Restricciones para tablas volcadas
 --

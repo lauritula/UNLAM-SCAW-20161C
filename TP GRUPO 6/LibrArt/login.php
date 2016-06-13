@@ -30,6 +30,10 @@ session_destroy();
 			<h5>Contrase&ntilde;a</h5>
 			<input class="input" type="password"  name="pass" id="pass" autocomplete="off"/>
 			<br/> <br/>
+
+			<h5>Frase privada</h5>
+			<input class="input" type="password"  name="passphrases" id="passphrases" autocomplete="off"/>
+			<br/> <br/>
 			
 			<input class="button-primary" type="button" onclick="javascript:validar();"  value="Ingresar" />
 			<input class="button-primary" type="button" onclick="javascript:registrar();"  value="Registrarse" />

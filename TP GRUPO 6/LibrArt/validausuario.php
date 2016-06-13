@@ -14,17 +14,31 @@ $usuario = $_POST["usuario"];
 $usuario = addslashes($_POST["usuario"]);
 $pass = $_POST["pass"];
 $pass = addslashes($_POST["pass"]);
+$passphrases = $_POST["passphrases"];
+$passphrases_array = explode(" ", $passphrases);
+$longitud = count($passphrases_array);
+
+for($i=0;$i<$longitud;$i++){
+	$palabra=$passphrases_array[$i];
+	$letra=$palabra[0];
+	$passphrases_array[$i]=$letra;
+	//echo $passphrases_array[$i];
+	//echo "</br>";
+}
+
+$new_passphrases_array = implode("", $passphrases_array);
+
 
 $passEncriptada = md5($pass);
 conectar_mysql("localhost","root","","libreria");
 
-$squery = "select * from usuario where us_login = '$usuario' and us_password='$pass'";//query
+$squery = "select * from usuario where us_login = '$usuario' and us_password='$pass' and passphrases='$new_passphrases_array'";//query
 $resultado = ejecutar_sql($squery);
 $filas = cantFilas($squery);
 
 if ($filas == 0)
 {
-	mensaje("Usuario o Contraseña invalidos.","login.php","E");
+	mensaje("Algunos de los datos ingresados no son invalidos.","login.php","E");
 }
 else
 {
