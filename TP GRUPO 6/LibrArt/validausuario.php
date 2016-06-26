@@ -54,9 +54,65 @@ else
 
 mysql_free_result($resultado);
 
+//cifrado simetrico 
+
+# establecemos la clave y la cadena a encriptar
+  $clave = $pass;
+  $texto = $pass;
+     /*creamos un identificador de encriptado en el que indicamos
+      el tipo de cifrador (cast-128) y el modo de cifrado (ecb) */
+  $ident = mcrypt_module_open('cast-128', '', 'ecb', '');
+     /* dado que algunas funciones requieren de un vector de inicializacion
+      acorde con sus especificaciones esta función determina el tamaño
+      de ese vector atendiendo al tipo de identificador */
+  $long_iniciador=mcrypt_enc_get_iv_size($ident);
+     /* crea el vector de inicialización con valores aleatorios
+      y dándole la dimensión precalculada en la función anterior */
+  $inicializador = mcrypt_create_iv ($long_iniciador, MCRYPT_RAND);
+      /* Contimuamos la secuencia de encriptado incializando todos los buffer
+       necesarios para llevar a cabo las labores de encriptado */
+  mcrypt_generic_init($ident, $clave, $inicializador);
+    /* realiza el encriptado proopiamente dicho */
+  $texto_encriptado = mcrypt_generic($ident, $texto);
+    /* libera los buffer pero no cierra el modulo */
+  mcrypt_generic_deinit($ident);
+    /* esta instruccion es necesaria para cerrar el modulo de encriptado*/
+  mcrypt_module_close($ident);
+     /* guardamos la cadena encriptada en un fichero con nombre encriptado */
+     file_put_contents('encriptado',$texto_encriptado);
+
+//decifrado simetrico 
+
+     /* hemos de usar la misma clave con la que ha sido encriptado */
+  $clave = $pass; 
+   /* leemos el fichero encriptado creado por el script anterior */
+ $texto_encriptado =file_get_contents('encriptado');
+      /*creamos un identificador de encriptado que ha de ser el mismo con
+  el que hemos realizado la encriptación */
+ $ident = mcrypt_module_open('cast-128', '', 'ecb', '');
+   /* dado que algunas funciones requieren de un vector de inicializacion
+     acorde con sus especificaciones esta función determina el tamaño de ese
+     vector atendiendo al tipo de identificador anterior*/
+ $long_iniciador=mcrypt_enc_get_iv_size($ident);
+   /* crea el vector de inicialización con valores aleatorios
+     y dándole la dimensión precalculada en la función anterior */
+ $inicializador = mcrypt_create_iv ($long_iniciador, MCRYPT_RAND);
+   /* incializa todos los buffer necesarios para llevar
+    a cabo las labores de encriptado */
+ mcrypt_generic_init($ident, $clave, $inicializador);
+    /* realiza el desencriptado proopiamente dicho. Realmente es la unica
+       diferencia básica entre este script y el ejemplo anterior */
+ $desencriptado = mdecrypt_generic($ident, $texto_encriptado); 
+    /* libera los buffer pero no cierra el modulo */
+ mcrypt_generic_deinit($ident);
+    /* esta instruccion es necesaria para cerrar el modulo de encriptado*/
+ mcrypt_module_close($ident);
+ file_put_contents('desencriptado',$desencriptado);
 
 
 ?>
+
+
 
 </body>
 
