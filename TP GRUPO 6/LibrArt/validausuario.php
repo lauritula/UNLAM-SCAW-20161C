@@ -107,7 +107,8 @@ mysql_free_result($resultado);
  mcrypt_generic_deinit($ident);
     /* esta instruccion es necesaria para cerrar el modulo de encriptado*/
  mcrypt_module_close($ident);
- file_put_contents('desencriptado',$desencriptado);
+ /* Archivo desencriptado con la clave descifrada si se quiere verificar que el descifrado sea optimo*/
+ // file_put_contents('desencriptado',$desencriptado);
 
 
 ?>
